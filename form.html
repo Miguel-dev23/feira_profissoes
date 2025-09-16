@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição para a Feira de Profissões 2025</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header, main {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #0056b3;
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .nav-links {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .nav-links a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #0056b3;
+            padding: 0 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #28a745;
+            color: white;
+        }
+
+        button[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 40px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Inscrição para Feira de Profissões 2025</h1>
+            <p>Seja bem-vindo(a) à nossa Feira de Profissões! Preencha o formulário abaixo para se inscrever e garantir sua participação em palestras e workshops exclusivos.</p>
+        </header>
+
+        <nav class="nav-links">
+            <a href="#mensagem-field">Ir para Mensagem</a> |
+            <a href="#tabela-profissoes">Ver Tabela de Profissões</a> |
+            <a href="index.html">Voltar para a página principal</a>
+        </nav>
+
+        <hr>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required minlength="5" maxlength="100">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" pattern="\(\d{2}\)\d{5}-\d{4}" title="(XX)XXXXX-XXXX" required>
+                    <small>Formato: (99)99999-9999</small>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" pattern="(\d{3}\.){2}\d{3}-\d{2}" title="Formato: 999.999.999-99">
+                    <small>Formato: 999.999.999-99</small>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações da Inscrição</legend>
+                <div class="form-group">
+                    <label for="area-interesse">Área de Interesse:</label>
+                    <select id="area-interesse" name="area-interesse" required>
+                        <option value="" disabled selected>Selecione uma área</option>
+                        <option value="tecnologia">Tecnologia da Informação</option>
+                        <option value="saude">Saúde e Bem-Estar</option>
+                        <option value="engenharias">Engenharias e Indústria</option>
+                        <option value="gestao">Gestão e Negócios</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <p>Turno preferido:</p>
+                    <label><input type="radio" name="turno" value="manha" required> Manhã</label>
+                    <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+                    <label><input type="radio" name="turno" value="noite"> Noite</label>
+                </div>
+
+                <div class="form-group">
+                    <p>Interesses (marque todos que se aplicam):</p>
+                    <label><input type="checkbox" name="interesses[]" value="palestras"> Palestras</label>
+                    <label><input type="checkbox" name="interesses[]" value="workshops"> Workshops</label>
+                    <label><input type="checkbox" name="interesses[]" value="stand-up"> Stands de Empresas</label>
+                    <label><input type="checkbox" name="interesses[]" value="networking"> Networking</label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensagem" id="mensagem-field">Sua Mensagem ou Sugestão:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required minlength="10"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="arquivo">Envie um arquivo com suas perguntas ou sugestões (apenas PDF):</label>
+                    <input type="file" id="arquivo" name="arquivo" accept=".pdf">
+                </div>
+            </fieldset>
+
+            <div class="button-group">
+                <button type="submit">Enviar Inscrição</button>
+                <button type="reset">Limpar Formulário</button>
+            </div>
+        </form>
+
+        <hr>
+
+        <section id="tabela-profissoes">
+            <h2>Exemplos de Profissões e Palestras</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Área</th>
+                        <th>Profissão</th>
+                        <th>Título da Palestra</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tecnologia</td>
+                        <td>Desenvolvedor(a) Front-end</td>
+                        <td>Construindo a Web do Futuro com HTML e CSS</td>
+                    </tr>
+                    <tr>
+                        <td>Saúde</td>
+                        <td>Enfermeiro(a)</td>
+                        <td>Inovação e Cuidado: A Enfermagem no Século XXI</td>
+                    </tr>
+                    <tr>
+                        <td>Engenharia</td>
+                        <td>Engenheiro(a) de Produção</td>
+                        <td>Otimizando Processos Industriais com Tecnologia</td>
+                    </tr>
+                    <tr>
+                        <td>Gestão</td>
+                        <td>Analista de Marketing</td>
+                        <td>Estratégias de Marketing Digital para o Mercado Atual</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
